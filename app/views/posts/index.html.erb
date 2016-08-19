@@ -1,0 +1,39 @@
+<div class="container">
+	<div class="row">
+		<div class="col s12 m9">
+			<div class="article-list" id="article-list">
+				<div class="card">
+					<div class="card-content">
+						<% @posts.each do |post| %>
+							<div class="article-item">
+								<div class="article-item-inner">
+									<p class="article-item-header">
+										<span class="article-item-created-at"><%= post.created_at %></span>
+									</p>
+									<h4 class="article-item-title">
+										<%= link_to post.title, post_path(post) %>
+									</h4>
+									<p class="article-item-content"><%= post.content %></p>
+									<p class="article-item-link"><%= link_to 'View Post', post_path(post) %></p>
+								</div>
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col s12 m3">
+			<div class="blog-sidebar">
+				<div class="card">
+					<div class="card-content">
+						<form>
+							<div class="category-filter">
+
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

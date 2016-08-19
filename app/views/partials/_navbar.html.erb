@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <div class="nav-wrapper container">
+    <%= link_to 'LOGO', root_path, class: 'brand-logo' %>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><%= link_to 'Blog', posts_path %></li>
+      <li><%= link_to 'About', '#' %></li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><%= link_to 'Blog', posts_path %></li>
+      <li><%= link_to 'About', '#' %></li>
+    </ul>
+  </div>
+</nav>
+

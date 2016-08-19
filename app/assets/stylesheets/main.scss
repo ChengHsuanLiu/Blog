@@ -1,0 +1,64 @@
+body {
+  // background-image: image-url('bg.jpg');
+  background-color: #2e9d94;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+*{
+  font-weight: 300 !important;
+  box-shadow: none !important;
+  color: #3c3f4f;
+}
+
+p {
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+
+.navbar{
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.introduce-my-self{
+  margin-top: 80px;
+}
+
+.introduce-my-self p{
+  font-size: 20px;
+}
+
+.article-item{
+  margin: 24px 0;
+}
+
+.article-item-inner{
+}
+
+.article-item-header{
+
+}
+
+.article-item-created-at{
+
+}
+
+.article-item-title{
+  > a {
+    color: #3c3f4f;
+  }
+}
+
+.article-item-content{
+  color: #a2a2a2 !important;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.article-item-link{
+
+}
