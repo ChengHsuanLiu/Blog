@@ -1,31 +1,38 @@
+<%= stylesheet_link_tag 'trumbowyg' %>
 <div class="container">
 	<div class="row">
 		<div class="col s12">
 			<div class="card">
 				<div class="card-content">
 					<%= form_for [:admins, @post], html: { multipart: true } do |f| %>
-						<div class="field">
+						<div class="field margin-bottom-s">
 							<%= f.label :title %>
 							<%= f.text_field :title %>
 						</div>
-						<div class="field">
+						<div class="field margin-bottom-s">
 							<%= f.label :category_id %>
 							<%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class: 'browser-default'}) %>
 						</div>
-						<div class="field">
+						<div class="field margin-bottom-s">
 							<%= f.label :content %>
 							<%= f.text_area :content %>
 						</div>
-						<div class="field">
+						<div class="field margin-bottom-s">
 							<%= f.label :excerpt %>
-							<%= f.text_area :excerpt %>
+							<%= f.text_area :excerpt, class: 'materialize-textarea' %>
 						</div>
-						<div class="field">
-							<%= f.label :is_public %>
-							<%= f.check_box :is_public %>
+						<div class="field margin-bottom-s">
+						  <div class="switch">
+						    <label>
+						      Private
+						      <%= f.check_box :is_public %>
+						      <span class="lever"></span>
+						      Public
+						    </label>
+						  </div>
 						</div>
-						<div class="field">
-							<%= f.submit 'Submit' %>
+						<div class="field margin-bottom-s">
+							<%= f.submit 'Submit', class: 'btn' %>
 						</div>
 					<% end %>
 				</div>
@@ -33,3 +40,43 @@
 		</div>
 	</div>
 </div>
+<%= javascript_include_tag 'trumbowyg', data: { 'turbolinks-eval': false } %>
+<script type="text/javascript" data-turbolinks-eval="false">
+	document.addEventListener('turbolinks:load', function() {
+		$.trumbowyg.svgPath = '<%= image_path "trumbowyg_icons.svg" %>';
+		$('#post_content').trumbowyg({
+		    btns: [
+		    	['viewHTML'],
+	        ['formatting'],
+	        'btnGrp-semantic',
+	        ['link'],
+	        ['insertImage'],
+	        'btnGrp-justify',
+	        'btnGrp-lists',
+	        ['horizontalRule'],
+	        ['removeformat'],
+	        ['fullscreen'],
+	      ],
+		    autogrow: true,
+		    lang: 'zh_tw'
+		});
+		$.trumbowyg.svgPath = '<%= image_path "trumbowyg_icons.svg" %>';
+		$.trumbowyg.svgPath = '<%= image_path "trumbowyg_icons.svg" %>';
+		$('#post_excerpt').trumbowyg({
+		    btns: [
+		    	['viewHTML'],
+	        ['formatting'],
+	        'btnGrp-semantic',
+	        ['link'],
+	        ['insertImage'],
+	        'btnGrp-justify',
+	        'btnGrp-lists',
+	        ['horizontalRule'],
+	        ['removeformat'],
+	        ['fullscreen'],
+	      ],
+		    autogrow: true,
+		    lang: 'zh_tw'
+		});
+	})
+</script>

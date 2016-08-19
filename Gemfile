@@ -28,8 +28,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
-
 gem 'kaminari'
+gem 'trumbowyg_rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
