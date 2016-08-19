@@ -1,13 +1,18 @@
 class Admins::PostsController < ApplicationController
+  before_action :authenticate_admin!
+
   def index
+    @page_title = 'Admin::Articles'
     @posts = Post.all
   end
 
   def new
+    @page_title = 'Admin::New Article'
     @post = Post.new
   end
 
   def edit
+    @page_title = 'Admin::Edit Article'
     @post = Post.find(params[:id])
   end
 
@@ -34,7 +39,7 @@ class Admins::PostsController < ApplicationController
   end
 
   def destroy
-    @post.d
+    @post.destroy
     flash[:success] = 'Successfully destory.'
     redirect_to admins_posts_path
   end

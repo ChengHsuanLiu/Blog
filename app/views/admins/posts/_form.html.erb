@@ -4,7 +4,7 @@
 		<div class="col s12">
 			<div class="card">
 				<div class="card-content">
-					<%= form_for [:admins, @post], html: { multipart: true } do |f| %>
+					<%= form_for [:admins, @post] do |f| %>
 						<div class="field margin-bottom-s">
 							<%= f.label :title %>
 							<%= f.text_field :title %>
