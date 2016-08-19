@@ -1,5 +1,6 @@
 class Admins::CategoriesController < ApplicationController
   before_action :authenticate_admin!
+  layout 'admins'
 
   def index
     @page_title = 'Admin::Categories'

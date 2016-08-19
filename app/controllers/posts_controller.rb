@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
   def index
     @page_title = 'Articles'
-    @posts = Post.available_posts
-    @posts = @posts.where(category_id: params[:category_id]) if params[:category_id].present?
+    @posts = Post.available_posts.order('created_at DESC')
+    @posts = @posts.where(category_id: params[:category_id]).order('created_at DESC') if params[:category_id].present?
   end
 
   def show

@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  belongs_to :category
   scope :public_posts, -> { where('is_public = ?', true) }
   scope :exist_posts, -> { where(deleted_at: nil) }
 

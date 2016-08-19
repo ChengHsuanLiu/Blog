@@ -9,16 +9,15 @@
 					<table>
 						<thead>
 							<tr>
-								<th>name</th>
+								<th>Name</th>
 								<th></th>
 							</tr>
 						</thead>
 						<tbody>
 							<% @categories.each do |c| %>
 								<tr>
-									<td><%= c.name %></td>
+									<td><%= link_to c.name, edit_admins_category_path(c) %></td>
 									<td>
-										<p><%= link_to 'Edit', edit_admins_category_path(c) %></p>
 										<p><%= link_to 'Delete', admins_category_path(c), method: :delete %></p>
 									</td>
 								</tr>

@@ -1,9 +1,10 @@
 class Admins::PostsController < ApplicationController
   before_action :authenticate_admin!
+  layout 'admins'
 
   def index
     @page_title = 'Admin::Articles'
-    @posts = Post.all
+    @posts = Post.where(deleted_at: nil).order('created_at DESC')
   end
 
   def new
@@ -31,7 +32,7 @@ class Admins::PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.update(posts_params)
       flash[:success] = 'Successfully update.'
-      redirect_to admins_edit_posts_path(@post)
+      redirect_to edit_admins_post_path(@post)
     else
       flash[:error] = @post.errors.full_messages
       render 'edit'

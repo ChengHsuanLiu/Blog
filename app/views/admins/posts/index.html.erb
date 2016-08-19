@@ -1,0 +1,37 @@
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<div class="card">
+				<div class="card-content">
+					<div class="text-align-right">
+						<%= link_to 'New', new_admins_post_path, class: 'btn' %>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th>Category</th>
+								<th>Public / Private</th>
+								<th>Created At</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<% @posts.each do |post| %>
+								<tr>
+									<td><%= link_to post.title, edit_admins_post_path(post) %></td>
+									<td><%= post.category.try(:name) %></td>
+									<td><%= post_if_public(post) %></td>
+									<td><%= post.created_at %></td>
+									<td>
+										<p><%= link_to 'Delete', admins_post_path(post), method: :delete %></p>
+									</td>
+								</tr>
+							<% end %>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

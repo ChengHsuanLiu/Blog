@@ -1,0 +1,19 @@
+<nav class="navbar">
+  <div class="nav-wrapper container">
+    <%= link_to 'Admin Panel', admins_posts_path, class: 'brand-logo' %>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><%= link_to 'Articles', admins_posts_path %></li>
+      <li><%= link_to 'Categories', admins_categories_path %></li>
+      <li><%= link_to 'Back to blog', posts_path %></li>
+      <li><%= link_to 'Sign Out', destroy_admin_session_path, method: :delete %></li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><%= link_to 'Articles', admins_posts_path %></li>
+      <li><%= link_to 'Categories', admins_categories_path %></li>
+      <li><%= link_to 'Back to blog', posts_path %></li>
+      <li><%= link_to 'Sign Out', destroy_admin_session_path, method: :delete %></li>
+    </ul>
+  </div>
+</nav>
+
