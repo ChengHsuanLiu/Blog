@@ -1,0 +1,12 @@
+<div class="blog-sidebar">
+	<div class="card">
+		<div class="card-content">
+			<h5 class="margin-bottom-m margin-top-m">Category</h5>
+			<ul class="category-filter">
+				<% @categories.each do |c| %>
+					<li><%= link_to c.name, category_path(c), class: 'category-filter-trigger' %></li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>

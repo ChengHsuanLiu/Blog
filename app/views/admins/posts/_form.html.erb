@@ -41,7 +41,7 @@
 	</div>
 </div>
 <%= javascript_include_tag 'trumbowyg', data: { 'turbolinks-eval': false } %>
-<script type="text/javascript" data-turbolinks-eval="false">
+<script type="text/javascript">
 	document.addEventListener('turbolinks:load', function() {
 		$.trumbowyg.svgPath = '<%= image_path "trumbowyg_icons.svg" %>';
 		$('#post_content').trumbowyg({

@@ -1,6 +1,12 @@
+$primary-color: #5793a7;
+$secondary-color: orange;
+
 body {
-  // background-image: image-url('bg.jpg');
-  background-color: #2e9d94;
+  // background-color: $primary-color;
+  background: #F89680;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4cd4c9), color-stop(100%, #5793a7));
+  background: -webkit-linear-gradient(top, #4cd4c9 0, #5793a7 100%);
+  background: linear-gradient(to left top, #4cd4c9 0, #5793a7 100%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -11,21 +17,39 @@ body {
   font-weight: 300 !important;
   box-shadow: none !important;
   color: #3c3f4f;
+  font-family: "industry", "Roboto", helvetica, arial, sans-serif;
+  letter-spacing: .8px;
+  line-height: 1.8em;
+}
+
+a {
+  color: $primary-color;
+}
+
+a:hover, a:focus{
+  color: lighten($primary-color, 15%);
 }
 
 p {
   font-size: 18px;
   line-height: 30px;
-  letter-spacing: 1px;
+  letter-spacing: .8px;
 }
 
 .navbar{
   background-color: transparent;
   box-shadow: none;
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+nav ul a:hover {
+  color: #FFF;
 }
 
 .introduce-my-self{
-  margin-top: 80px;
+  padding-top: 0;
 }
 
 .introduce-my-self p{
@@ -34,6 +58,8 @@ p {
 
 .article-item{
   margin: 24px 0;
+  padding: 20px 0 50px 0;
+  border-bottom: 1px solid #EEE;
 }
 
 .article-item-inner{
@@ -48,9 +74,14 @@ p {
 }
 
 .article-item-title{
+  margin-top: 4px;
   > a {
     color: #3c3f4f;
   }
+}
+
+.article-item-category a {
+  color: $secondary-color;
 }
 
 .article-item-content{
@@ -74,7 +105,51 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
 }
 
 input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-  border: 1px solid #2e9d94;
+  border: 1px solid $primary-color;
+}
+
+.brand-logo{
+  min-height: 60px;
+  height: 100%;
+
+  > img{
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 992px){
+  nav .brand-logo {
+    left: 24px !important;
+  }
+}
+
+nav .button-collapse {
+  float: right;
+}
+
+.btn {
+  background-color: $primary-color;
+}
+
+.btn:hover{
+  color: #FFFFFF;
+}
+
+.side-nav a {
+  color: #FFFFFF;
+}
+
+.side-nav a:hover{
+  color: $secondary-color;
+}
+
+.side-nav{
+  background-color: #434343;
+  padding: 24px 12px;
+}
+
+.side-nav a:hover {
+  background-color: transparent;
 }
 
 

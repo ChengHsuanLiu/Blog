@@ -1,6 +1,8 @@
 <nav class="navbar">
-  <div class="nav-wrapper container">
-    <%= link_to 'LOGO', root_path, class: 'brand-logo' %>
+  <div class="nav-wrapper container-fluid">
+    <%= link_to root_path, class: 'brand-logo' do %>
+      <%= image_tag 'logo.png' %>
+    <% end %>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <li><%= link_to 'Blog', posts_path %></li>
@@ -12,4 +14,8 @@
     </ul>
   </div>
 </nav>
-
+<script type="text/javascript" data-turbolinks-eval="false">
+  document.addEventListener('turbolinks:load', function() {
+    $(".button-collapse").sideNav();
+  })
+</script>

@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row">
+		<div class="col s12 m9">
+			<div class="article-list" id="article-list">
+				<div class="card">
+					<div class="card-content">
+						<h4 class="margin-bottom-m"><%= @post.title %></h4>
+						<div class="hr margin-bottom-m"></div>
+						<div class="post-content">
+							<%= @post.content.html_safe %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col s12 m3">
+			<%= render 'partials/blog_sidebar' %>
+		</div>
+	</div>
+</div>
