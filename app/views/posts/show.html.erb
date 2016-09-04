@@ -4,10 +4,14 @@
 			<div class="article-list" id="article-list">
 				<div class="card">
 					<div class="card-content">
-						<h4 class="margin-bottom-m"><%= @post.title %></h4>
+						<h4 class="margin-bottom-m post-title"><%= @post.title %></h4>
 						<div class="hr margin-bottom-m"></div>
 						<div class="post-content">
 							<%= @post.content.html_safe %>
+						</div>
+						<div class="prev-next-post-link-container padding-top-l">
+							<div class="prev-link prev-next-link-block"><%= prev_post_link(@post.id) %></div>
+							<div class="next-link prev-next-link-block"><%= next_post_link(@post.id) %></div>
 						</div>
 					</div>
 				</div>
