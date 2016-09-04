@@ -1,10 +1,16 @@
 <div class="blog-sidebar">
 	<div class="card">
 		<div class="card-content">
-			<h5 class="margin-bottom-m margin-top-m">Category</h5>
+			<h5 class="margin-bottom-s margin-top-m">Category</h5>
 			<ul class="category-filter">
 				<% @categories.each do |c| %>
-					<li><%= link_to c.name, category_path(c), class: 'category-filter-trigger' %></li>
+					<li class="sidebar-list"><%= link_to c.name, category_path(c), class: 'category-filter-trigger' %></li>
+				<% end %>
+			</ul>
+			<h5 class="margin-bottom-s margin-top-m">Latest Articles</h5>
+			<ul>
+				<% @latest_posts.each do |p| %>
+					<li class="sidebar-list"><%= link_to p.title, post_path(p) %></li>
 				<% end %>
 			</ul>
 		</div>
