@@ -184,6 +184,25 @@ nav .button-collapse {
   font-weight: 500 !important;
 }
 
+pre {
+  font-size: 90%;
+  line-height: 1.2em;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+
+  width: auto;
+  display: block;
+  clear: both;
+  color: #555555;
+  padding: 1em 1em;
+  margin: 12px 0 24px 0;
+  background: #f4f4f4;
+  border: solid 1px #e1e1e1;
+}
+
 
 //**************************************************
 //--------------------------------------------------

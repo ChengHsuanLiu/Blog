@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <%= yield(:css) if content_for?(:css) %>
     <%= favicon_link_tag 'logo.png' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -16,14 +17,15 @@
   </head>
 
   <body>
-  	<%= render 'partials/navbar' %>
-  	<div class="wrapper">
-  		<header class="container padding-top-l">
-  			<div class="header-title">
-  				<h1><%= @page_title || "Hi, I'm Lucas." %></h1>
-  			</div>
-  		</header>
-	    <%= yield %>
-  	</div>
+    <%= render 'partials/navbar' %>
+    <div class="wrapper">
+      <header class="container padding-top-l">
+        <div class="header-title">
+          <h1><%= @page_title || "Hi, I'm Lucas." %></h1>
+        </div>
+      </header>
+      <%= yield %>
+    </div>
+    <%= yield(:script) if content_for?(:script) %>
   </body>
 </html>
