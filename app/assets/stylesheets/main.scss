@@ -159,16 +159,18 @@ nav .button-collapse {
 
 .prev-link a{
   font-size: 14px;
+  padding: 12px;
+  max-width: 250px;
+  border: 1px dashed #ccc;
+  display: block;
 }
 
 .next-link a{
   font-size: 14px;
-}
-
-.prev-next-link-block{
   padding: 12px;
   max-width: 250px;
   border: 1px dashed #ccc;
+  display: block;
 }
 
 .prev-next-post-link-container{
