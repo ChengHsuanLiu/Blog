@@ -152,6 +152,38 @@ nav .button-collapse {
   background-color: transparent;
 }
 
+.sidebar-list{
+  border-bottom: 1px solid #EEE;
+  padding: 12px 0;
+}
+
+.prev-link a{
+  font-size: 14px;
+}
+
+.next-link a{
+  font-size: 14px;
+}
+
+.prev-next-link-block{
+  padding: 12px;
+  max-width: 250px;
+  border: 1px dashed #ccc;
+}
+
+.prev-next-post-link-container{
+  display: flex;
+  display: -webkit-flex;
+  display: -o-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  justify-content: space-between;
+}
+
+.post-title{
+  font-weight: 500 !important;
+}
+
 
 //**************************************************
 //--------------------------------------------------
